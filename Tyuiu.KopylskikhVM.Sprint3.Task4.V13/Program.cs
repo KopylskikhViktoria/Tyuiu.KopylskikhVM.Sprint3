@@ -1,4 +1,4 @@
-﻿using Tyuiu.KopylskikhVM.Sprint3.Task3.V23.Lib;
+﻿using Tyuiu.KopylskikhVM.Sprint3.Task4.V13.Lib;
 
 internal class Program
 {
@@ -10,49 +10,32 @@ internal class Program
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #3                                                               *");
-        Console.WriteLine("* Тема: Оператор цикла foreach                                            *");
-        Console.WriteLine("* Задание #3                                                              *");
-        Console.WriteLine("* Вариант #23                                                             *");
+        Console.WriteLine("* Тема: Использование операторов continue и break в циклах                *");
+        Console.WriteLine("* Задание #4                                                              *");
+        Console.WriteLine("* Вариант #13                                                             *");
         Console.WriteLine("* Выполнила: Копыльских Виктория Максимовна | НТм-24-1                    *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Используя цикл foreach заменить буквы s на цифру 8                      *");
-        Console.WriteLine("* в строке: fdsst siu vsrs                                                *");
+        Console.WriteLine("* На отрезке от -5 до 5 вычислить произведение значений функции           *");
+        Console.WriteLine("* y = sin(x) / cos(x).                                                    *");
+        Console.WriteLine("*                                                                         *");
+        Console.WriteLine("* При x = 0 прервать цикл.                                                *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string value = "fdsst siu vsrs";
-        char replaceable = 's';
-        char replacement = '8';
+        int startValue = -5;
+        int stopValue = 5;
 
-        Console.WriteLine("Исходная строка = " + value);
-        Console.WriteLine("Заменяемый символ = " + replaceable);
-        Console.WriteLine("Символ замены = " + replacement);
+        Console.WriteLine("Старт шага = " + startValue);
+        Console.WriteLine("Конец шага = " + stopValue);
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine(ds.ReplaceCharOnNum(value, replaceable, replacement));
-
-        int x;
-        double sp = 1;
-        int i = 0;
-
-        for (x = -2; x <= 2; x++)
-        {
-            if (x == 0)
-            {
-                continue;
-            }
-
-            sp = sp * (2 * x + 2);
-            i++;
-        }
-
-        Console.WriteLine(sp);
+        Console.WriteLine(ds.Calculate(startValue, stopValue));
 
         Console.ReadLine();
     }
