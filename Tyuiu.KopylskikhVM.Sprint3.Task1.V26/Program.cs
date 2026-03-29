@@ -1,4 +1,4 @@
-﻿using Tyuiu.KopylskikhVM.Sprint3.Task0.V13.Lib;
+﻿using Tyuiu.KopylskikhVM.Sprint3.Task1.V26.Lib;
 
 internal class Program
 {
@@ -10,25 +10,28 @@ internal class Program
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #3                                                               *");
-        Console.WriteLine("* Тема: Оператор цикла for                                                *");
-        Console.WriteLine("* Задание #0                                                              *");
-        Console.WriteLine("* Вариант #13                                                             *");
+        Console.WriteLine("* Тема: Оператор цикла while                                              *");
+        Console.WriteLine("* Задание #1                                                              *");
+        Console.WriteLine("* Вариант #26                                                             *");
         Console.WriteLine("* Выполнила: Копыльских Виктория Максимовна | НТм-24-1                    *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
         Console.WriteLine("* Вычислить сумму ряда:                                                   *");
         Console.WriteLine("*                                                                         *");
-        Console.WriteLine("* S = Σ(k=1..20) (a^k + 1/2) * cos(k)                                     *");
+        Console.WriteLine("* S = Σ(k=1..8) (6 / n^k)^2                                               *");
         Console.WriteLine("*                                                                         *");
+        Console.WriteLine("* n = 5                                                                   *");
+        Console.WriteLine("*                                                                         *");
+        Console.WriteLine("* Ответ округлить до 3 знаков после запятой.                              *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        double zzz = 0.5;
+        int value = 5;
         int startValue = 1;
-        int stopValue = 20;
+        int stopValue = 8;
 
-        Console.WriteLine("Переменная a = " + zzz);
+        Console.WriteLine("Переменная n = " + value);
         Console.WriteLine("Старт шага = " + startValue);
         Console.WriteLine("Конец шага = " + stopValue);
 
@@ -36,24 +39,7 @@ internal class Program
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine(ds.GetSumSeries(zzz, startValue, stopValue));
-
-        int a = 2;
-        int b = 4;
-        int c = 3;
-        int d = 5;
-        int i = 1;
-
-        while (i < 4)
-        {
-            b++;
-            b -= a;
-            c = b - a;
-            d = (c + a) + i;
-            i++;
-        }
-
-        Console.WriteLine(d);
+        Console.WriteLine(ds.GetSumSeries(value, startValue, stopValue));
 
         Console.ReadLine();
     }
